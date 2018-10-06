@@ -1,25 +1,24 @@
-{% set name = "bintrees" %}
 {% set version = "2.0.7" %}
-{% set sha256 = "60675e6602cef094abcd38bf4aecc067d78ae2d5e1645615c789724542d11270" %}
 
 package:
-  name: {{ name|lower }}
+  name: bintrees
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/b/bintrees/bintrees-{{ version }}.zip
+  sha256: 60675e6602cef094abcd38bf4aecc067d78ae2d5e1645615c789724542d11270
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  skip: True  # [py>36]
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
-    - toolchain
+    - pip
     - cython
   run:
     - python
