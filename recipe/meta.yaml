@@ -1,4 +1,4 @@
-{% set version = "2.0.7" %}
+{% set version = "2.1.0" %}
 
 package:
   name: bintrees
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/bintrees/bintrees-{{ version }}.zip
-  sha256: 60675e6602cef094abcd38bf4aecc067d78ae2d5e1645615c789724542d11270
+  sha256: eae2732fae01b24eb17b3943721945c1ec88b2126e081c5c785ce448924d3f96
 
 build:
-  number: 1001
-  skip: True  # [py>36]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  skip: true  # [py>36]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
@@ -34,7 +34,7 @@ about:
   home: https://pypi.python.org/pypi/bintrees/2.0.7
   license: MIT
   license_file: LICENSE.txt
-  summary: 'Binary-, RedBlack- and AVL-Trees in Python and Cython'
+  summary: Binary-, RedBlack- and AVL-Trees in Python and Cython
 
   # The remaining entries in this section are optional, but recommended
   description: |
