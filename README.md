@@ -5,9 +5,13 @@ Home: https://pypi.python.org/pypi/bintrees/2.0.7
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bintrees-feedstock/blob/master/LICENSE.txt)
 
 Summary: Binary-, RedBlack- and AVL-Trees in Python and Cython
+
+Development: https://github.com/mozman/bintrees
+
+Documentation: https://pypi.python.org/pypi/bintrees/2.0.7
 
 Use sortedcontainers instead: https://pypi.python.org/pypi/sortedcontainers
 This Classes are much slower than the built-in dict class, but all iterators/generators
