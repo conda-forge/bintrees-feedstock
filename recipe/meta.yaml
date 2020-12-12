@@ -10,17 +10,18 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.6
+    - python
     - pip
     - cython
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
