@@ -1,11 +1,11 @@
-About bintrees
-==============
+About bintrees-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bintrees-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.python.org/pypi/bintrees
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bintrees-feedstock/blob/main/LICENSE.txt)
 
 Summary: Binary-, RedBlack- and AVL-Trees in Python and Cython
 
